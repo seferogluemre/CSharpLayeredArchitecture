@@ -42,9 +42,13 @@ namespace CSharpLayeredArchitecture
             entity.Maas = short.Parse(TxtMaas.Text);
             LogicPersonel.logicLayerAddPersonel(entity);
             List();
-
         }
 
-        
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            EntityPersonel entity = new EntityPersonel();
+            entity.Id = Convert.ToInt32(TextId.Text);
+            LogicPersonel.logicLayerRemovePersonel(entity.Id);
+        }
     }
 }

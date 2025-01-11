@@ -48,5 +48,19 @@ namespace DataAccessLayer
             return komut.ExecuteNonQuery();
         }
 
+        //Personel Silme
+        public static bool RemovePersonel(int personel)
+        {
+            SqlCommand sqlCommand = new SqlCommand("Delete from TblPersonelBilgi where Id=@p1", Connection.connection);
+            if (sqlCommand.Connection.State != ConnectionState.Open)
+            {
+                sqlCommand.Connection.Open();
+            }
+            sqlCommand.Parameters.AddWithValue("@p1", personel);
+            return sqlCommand.ExecuteNonQuery() > 0;
+        }
+
+        // Personel güncelleme
+        public static bool 
     }
 }

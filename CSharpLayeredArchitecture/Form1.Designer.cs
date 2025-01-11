@@ -30,7 +30,7 @@
         {
             this.BtnListele = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.TxtPersonId = new System.Windows.Forms.TextBox();
+            this.TextId = new System.Windows.Forms.TextBox();
             this.TxtAd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtSoya = new System.Windows.Forms.TextBox();
@@ -43,12 +43,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnAdd = new System.Windows.Forms.Button();
+            this.BtnSil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnListele
             // 
             this.BtnListele.BackColor = System.Drawing.Color.Turquoise;
+            this.BtnListele.ForeColor = System.Drawing.Color.White;
             this.BtnListele.Location = new System.Drawing.Point(712, 24);
             this.BtnListele.Name = "BtnListele";
             this.BtnListele.Size = new System.Drawing.Size(149, 56);
@@ -66,13 +68,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Id:";
             // 
-            // TxtPersonId
+            // TextId
             // 
-            this.TxtPersonId.Location = new System.Drawing.Point(101, 30);
-            this.TxtPersonId.MaxLength = 15;
-            this.TxtPersonId.Name = "TxtPersonId";
-            this.TxtPersonId.Size = new System.Drawing.Size(212, 38);
-            this.TxtPersonId.TabIndex = 2;
+            this.TextId.Location = new System.Drawing.Point(101, 30);
+            this.TextId.MaxLength = 15;
+            this.TextId.Name = "TextId";
+            this.TextId.Size = new System.Drawing.Size(212, 38);
+            this.TextId.TabIndex = 2;
             // 
             // TxtAd
             // 
@@ -172,6 +174,7 @@
             // BtnAdd
             // 
             this.BtnAdd.BackColor = System.Drawing.Color.Lime;
+            this.BtnAdd.ForeColor = System.Drawing.Color.White;
             this.BtnAdd.Location = new System.Drawing.Point(882, 24);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(149, 56);
@@ -180,12 +183,25 @@
             this.BtnAdd.UseVisualStyleBackColor = false;
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
+            // BtnSil
+            // 
+            this.BtnSil.BackColor = System.Drawing.Color.Crimson;
+            this.BtnSil.ForeColor = System.Drawing.Color.White;
+            this.BtnSil.Location = new System.Drawing.Point(712, 121);
+            this.BtnSil.Name = "BtnSil";
+            this.BtnSil.Size = new System.Drawing.Size(149, 56);
+            this.BtnSil.TabIndex = 15;
+            this.BtnSil.Text = "Silme";
+            this.BtnSil.UseVisualStyleBackColor = false;
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1043, 583);
+            this.Controls.Add(this.BtnSil);
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TxtMaas);
@@ -198,7 +214,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TxtAd);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.TxtPersonId);
+            this.Controls.Add(this.TextId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnListele);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -219,7 +235,7 @@
 
         private System.Windows.Forms.Button BtnListele;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TxtPersonId;
+        private System.Windows.Forms.TextBox TextId;
         private System.Windows.Forms.TextBox TxtAd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtSoya;
@@ -232,6 +248,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button BtnAdd;
+        private System.Windows.Forms.Button BtnSil;
     }
 }
 

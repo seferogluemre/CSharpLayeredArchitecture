@@ -28,6 +28,17 @@ namespace LogicLayer
                 return -1;
             }
         }
-
+        
+        public static bool logicLayerRemovePersonel(int personel)
+        {
+            if (personel>0)
+            {
+                return DALPersonel.RemovePersonel(personel);
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
