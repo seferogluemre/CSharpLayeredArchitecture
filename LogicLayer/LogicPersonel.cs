@@ -17,6 +17,17 @@ namespace LogicLayer
         {
             return DALPersonel.PersonelList();
         }
+        public static int logicLayerAddPersonel(EntityPersonel entityPersonel)
+        {
+            if(entityPersonel.Ad!="" && entityPersonel.Soyad !="" && entityPersonel.Ad.Length>=3 && entityPersonel.Maas > 2900)
+            {
+                return DALPersonel.AddPersonel(entityPersonel);
+            }
+            else
+            {
+                return -1;
+            }
+        }
 
     }
 }
