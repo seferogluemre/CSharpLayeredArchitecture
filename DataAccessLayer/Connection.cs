@@ -9,11 +9,6 @@ namespace DataAccessLayer
 {
     public class Connection
     {
-        public SqlConnection connection()
-        {
-            SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-4DMQSS4;Initial Catalog=DbPersonel;Integrated Security=True;Encrypt=False;Trust Server Certificate=True");
-            baglanti.Open();
-            return baglanti;
-        }
+        public static SqlConnection connection = new SqlConnection("Data Source=DESKTOP-4DMQSS4;Initial Catalog=DbPersonel;Integrated Security=True;Encrypt=False;Trust Server Certificate=True");
     }
 }
