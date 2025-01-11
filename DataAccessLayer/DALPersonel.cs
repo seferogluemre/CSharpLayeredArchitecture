@@ -61,6 +61,20 @@ namespace DataAccessLayer
         }
 
         // Personel güncelleme
-        public static bool 
+        public static bool UpdatePersonel(EntityPersonel entityPersonel)
+        {
+            SqlCommand komut = new SqlCommand("update TblPersonelBilgi set Ad=@p1,Soyad=@p2,Maas=@p3,Sehir=@p4,Görev=@p5 where Id=@p6", Connection.connection);
+            if (komut.Connection.State != ConnectionState.Open)
+            {
+                komut.Connection.Open();
+            }
+            komut.Parameters.AddWithValue("@p1", entityPersonel.Ad);
+            komut.Parameters.AddWithValue("@p2", entityPersonel.Soyad);
+            komut.Parameters.AddWithValue("@p3", entityPersonel.Maas);
+            komut.Parameters.AddWithValue("@p4", entityPersonel.Sehir);
+            komut.Parameters.AddWithValue("@p5", entityPersonel.Görev);
+            komut.Parameters.AddWithValue("@p6", entityPersonel.Id);
+            return komut.ExecuteNonQuery() > 0;
+        }
     }
 }

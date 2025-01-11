@@ -28,12 +28,23 @@ namespace LogicLayer
                 return -1;
             }
         }
-        
         public static bool logicLayerRemovePersonel(int personel)
         {
             if (personel>0)
             {
                 return DALPersonel.RemovePersonel(personel);
+            }
+            else
+            {
+                return false;
+            }
+        }
+    
+        public static bool logicLayerUpdatePersonel(EntityPersonel entity)
+        {
+            if(entity.Ad.Length>3 && entity.Ad!="" && entity.Maas >=3800)
+            {
+                return DALPersonel.UpdatePersonel(entity)
             }
             else
             {
