@@ -1,17 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using EntityLayer;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using EntityLayer;
 
 
 namespace DataAccessLayer
 {
-    class DALPersonel
+    public class DALPersonel
     {
         public static List<EntityPersonel> PersonelList()
         {
             List<EntityPersonel> degerler = new List<EntityPersonel>();
-            SqlCommand command = new SqlCommand("Select * from TblPersonelBilgi",Connection.connection);
+            SqlCommand command = new SqlCommand("Select * from TblPersonelBilgi", Connection.connection);
             if (command.Connection.State != ConnectionState.Open)
             {
                 command.Connection.Open();
@@ -30,6 +30,6 @@ namespace DataAccessLayer
             dataReader.Close();
             return degerler;
         }
-                
+
     }
 }

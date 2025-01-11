@@ -6,11 +6,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using EntityLayer;
+using DataAccessLayer;
 
 namespace LogicLayer
 {
     public class LogicPersonel
     {
+        public static List<EntityPersonel> logicLayerPersonelLst()
+        {
+            return DALPersonel.PersonelList();
+        }
 
     }
 }
