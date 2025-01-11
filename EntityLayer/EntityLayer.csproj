@@ -43,6 +43,7 @@
     <Reference Include="Microsoft.Analytics.Types" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityDepartman.cs" />
     <Compile Include="EntityPersonel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
