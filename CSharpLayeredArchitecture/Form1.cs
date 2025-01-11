@@ -19,12 +19,32 @@ namespace CSharpLayeredArchitecture
         {
             InitializeComponent();
         }
-
-        private void BtnListele_Click(object sender, EventArgs e)
+        
+        private void List()
         {
             List<EntityPersonel> PersonList = LogicPersonel.logicLayerPersonelLst();
             dataGridView1.DataSource = PersonList;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+
+        private void BtnListele_Click(object sender, EventArgs e)
+        {
+            List();
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            EntityPersonel entity = new EntityPersonel();
+            entity.Ad = TxtAd.Text;
+            entity.Soyad = TxtSoya.Text;
+            entity.Sehir = TxtSehir.Text;
+            entity.Görev = TxtGörev.Text;
+            entity.Maas = short.Parse(TxtMaas.Text);
+            LogicPersonel.logicLayerAddPersonel(entity);
+            List();
+
+        }
+
+        
     }
 }
