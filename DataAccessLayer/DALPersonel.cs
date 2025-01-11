@@ -24,6 +24,7 @@ namespace DataAccessLayer
                 EntityPersonel.Ad = dataReader["Ad"].ToString();
                 EntityPersonel.Soyad = dataReader["Soyad"].ToString();
                 EntityPersonel.Görev = dataReader["Görev"].ToString();
+                EntityPersonel.Sehir = dataReader["Sehir"].ToString();
                 EntityPersonel.Maas = short.Parse(dataReader["Maas"].ToString());
                 degerler.Add(EntityPersonel);
             }

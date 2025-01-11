@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccessLayer;
+using EntityLayer;
+using LogicLayer;
 
 namespace CSharpLayeredArchitecture
 {
@@ -15,6 +18,13 @@ namespace CSharpLayeredArchitecture
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void BtnListele_Click(object sender, EventArgs e)
+        {
+            List<EntityPersonel> PersonList = LogicPersonel.logicLayerPersonelLst();
+            dataGridView1.DataSource = PersonList;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }
