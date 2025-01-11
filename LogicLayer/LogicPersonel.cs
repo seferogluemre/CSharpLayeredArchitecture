@@ -44,7 +44,7 @@ namespace LogicLayer
         {
             if(entity.Ad.Length>3 && entity.Ad!="" && entity.Maas >=3800)
             {
-                return DALPersonel.UpdatePersonel(entity)
+                return DALPersonel.UpdatePersonel(entity);
             }
             else
             {

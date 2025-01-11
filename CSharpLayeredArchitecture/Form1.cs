@@ -50,5 +50,17 @@ namespace CSharpLayeredArchitecture
             entity.Id = Convert.ToInt32(TextId.Text);
             LogicPersonel.logicLayerRemovePersonel(entity.Id);
         }
-    }
+
+        private void BtnGüncelleme_Click(object sender, EventArgs e)
+        {
+            EntityPersonel entity = new EntityPersonel();
+            entity.Id = Convert.ToInt32(TextId.Text);
+            entity.Ad = TxtAd.Text;
+            entity.Sehir = TxtSehir.Text;
+            entity.Görev = TxtGörev.Text;
+            entity.Maas = short.Parse(TxtMaas.Text);
+            LogicPersonel.logicLayerUpdatePersonel(entity);
+            List();
+        }
+    }   
 }
