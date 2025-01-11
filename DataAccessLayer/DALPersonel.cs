@@ -74,7 +74,7 @@ namespace DataAccessLayer
             komut.Parameters.AddWithValue("@p4", entityPersonel.Sehir);
             komut.Parameters.AddWithValue("@p5", entityPersonel.Görev);
             komut.Parameters.AddWithValue("@p6", entityPersonel.Id);
-            return komut.ExecuteNonQuery();
+            return komut.ExecuteNonQuery() > 0;
         }
     }
 }
