@@ -1,5 +1,5 @@
 Personnel Management Software
-This project is a 4-layer personnel management software developed using C# with object-oriented programming principles, adhering to the N-tier architecture.
+This project is a 4-layer Personel Management Software developed using C# with object-oriented programming principles, adhering to the N-tier architecture.
 
 Features:
 Layered Architecture: The project consists of 4 layers: business logic, data access, user interface, and shared models.
